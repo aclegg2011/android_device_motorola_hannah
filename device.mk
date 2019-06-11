@@ -44,8 +44,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Ambient display
-PRODUCT_PACKAGES += \
-    XiaomiDoze
+#PRODUCT_PACKAGES += \
+#    XiaomiDoze
 
 # ANT+
 PRODUCT_PACKAGES += \
