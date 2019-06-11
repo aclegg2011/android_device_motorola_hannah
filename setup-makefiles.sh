@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=hanna
+DEVICE=hannah
 VENDOR=motorola
 
 INITIAL_COPYRIGHT_YEAR=2019
@@ -43,7 +43,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true
 write_headers "hannah"
 
 # The standard common blobs
-write_makefiles "$MY_DIR"/proprietary-files-qc.txt true
+write_makefiles "$MY_DIR"/proprietary-files.txt true
 
 # We are done!
 write_footers
