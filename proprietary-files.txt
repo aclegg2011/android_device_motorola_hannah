@@ -1212,15 +1212,15 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
-proprietary/vendor/bin/hw/android.hardware.camera.provider@2.4-service
-proprietary/vendor/etc/audio_effects.xml
-proprietary/vendor/etc/audio_platform_info_ahannah.xml
-proprietary/vendor/etc/audio_policy.conf
-proprietary/vendor/etc/init/android.hardware.camera.provider@2.4-service.rc
-proprietary/vendor/etc/sound_trigger_mixer_paths.xml
-pproprietary/vendor/etc/sound_trigger_platform_info.xml
-proprietary/vendor/lib64/hw/gatekeeper.msm8937.so
-proprietary/vendor/lib64/mediadrm/libwvdrmengine.so
-proprietary/vendor/usr/idc/uinput-egis.idc
-proprietary/vendor/usr/keylayout/uinput-egis.kl
+vendor/bin/hw/android.hardware.camera.provider@2.4-service
+vendor/etc/audio_effects.xml
+vendor/etc/audio_platform_info_ahannah.xml
+vendor/etc/audio_policy.conf
+vendor/etc/init/android.hardware.camera.provider@2.4-service.rc
+vendor/etc/sound_trigger_mixer_paths.xml
+vendor/etc/sound_trigger_platform_info.xml
+vendor/lib64/hw/gatekeeper.msm8937.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/usr/idc/uinput-egis.idc
+vendor/usr/keylayout/uinput-egis.kl
 
