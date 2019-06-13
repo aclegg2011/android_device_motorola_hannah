@@ -174,6 +174,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/etc/fstab.qcom
 
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS := \
+    /vendor/fsg:/fsg \
     /vendor/dsp:/dsp \
     /vendor/firmware_mnt:/firmware \
     /mnt/vendor/persist:/persist
