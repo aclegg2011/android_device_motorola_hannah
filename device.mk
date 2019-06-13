@@ -104,11 +104,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
-# Consumerir HIDL
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
-
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8937 \
@@ -149,8 +144,8 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0-impl-qti \
+    android.hardware.gatekeeper@1.0-service-qti
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -207,20 +202,16 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
+    android.hardware.keymaster@3.0-impl-qti \
+    android.hardware.keymaster@3.0-service-qti
 
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8937
 
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl \
-    android.hardware.light@2.0-service
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+    android.hardware.light@2.0-impl.hannah \
+    android.hardware.light@2.0-service.hannah
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -319,17 +310,27 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.mmi.usb.rc \
+    init.oem.rc \
     init.qcom.rc \
-    init.qcom.usb.rc \
-    init.qcom.power.rc \
-    init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.sh \
-    init.qcom.usb.sh
+    init.mmi.usb.sh \
+    init.mmi.boot.sh \
+    init.mmi.touch.sh \
+    init.oem.hw.sh \
+    init.qcom.post_boot.sh \
+    init.mmi.laser.sh \
+    init.mmi.usb.sh \
+    init.qcom.sensors.sh \
+    init.qcom.syspart_fixup.sh
+
 
 # RenderScript
 PRODUCT_PACKAGES += \
