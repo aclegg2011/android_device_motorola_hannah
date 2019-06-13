@@ -67,14 +67,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
-    android.hardware.audio@4.0 \
-    android.hardware.audio@4.0-impl \
     android.hardware.audio.common@4.0 \
     android.hardware.audio.common@4.0-util \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@4.0 \
-    android.hardware.audio.effect@4.0-impl \
-    android.hardware.soundtrigger@2.1-impl
+    android.hardware.audio.effect@4.0-impl
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -94,11 +91,10 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
-
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service
+    Snap \
+    libbson.vendor \
+    camera.device@3.2-impl:32 \
+    android.hardware.camera.provider@2.4-impl:32
 
 # CNE
 PRODUCT_PACKAGES += \
@@ -206,8 +202,8 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service-qti
 
 # Lights
-PRODUCT_PACKAGES += \
-    lights.msm8937
+#PRODUCT_PACKAGES += \
+#    lights.msm8937
 
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl.hannah \
@@ -365,10 +361,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_8937
-
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
@@ -404,10 +396,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(DEVICE_PATH)/configs/wifi/firmware/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(DEVICE_PATH)/configs/wifi/firmware/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-
-# WiFi Display
-#PRODUCT_BOOT_JARS += \
-#    WfdCommon
 
 # Inherit common proprietary files
 $(call inherit-product-if-exists, vendor/motorola/hannah/hannah-vendor.mk)
