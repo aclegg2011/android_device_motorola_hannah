@@ -37,8 +37,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=hannah \
-    PRIVATE_BUILD_DESC="hannah_t-user 8.0.0 OCPS27.91-150-8 2 test-keys"
+    PRIVATE_BUILD_DESC="hannah_t-user 8.0.0 OCPS27.91-150-8 2 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCPS27.91-150-8/2:user/test-keys
-VENDOR_BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCPS27.91-150-8/2:user/test-keys
+BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCPS27.91-150-8/2:user/release-keys
+VENDOR_BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCPS27.91-150-8/2:user/release-keys
