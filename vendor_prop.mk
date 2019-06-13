@@ -1,153 +1,158 @@
-#
-# Copyright (C) 2018 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
-# Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1 \
-    audio.deep_buffer.media=true \
-    audio.offload.min.duration.secs=30 \
-    audio.offload.video=true \
-    persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.speaker=true \
-    persist.vendor.audio.fluence.voicerec=true \
-    persist.vendor.audio.speaker.prot.enable=false \
-    persist.vendor.bt.enable.splita2dp=false \
-    persist.vendor.audio.hw.binder.size_kbyte=1024 \
-    ro.config.media_vol_steps=15 \
-    ro.config.vc_call_vol_steps=7 \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    ro.vendor.audio.sdk.ssr=false \
-    vendor.audio_hal.period_size=192 \
-    vendor.audio.hw.aac.encoder=true \
-    vendor.audio.offload.buffer.size.kb=64 \
-    vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.playback.mch.downsample=true \
-    vendor.audio.offload.multiple.enabled=false \
-    vendor.audio.offload.passthrough=false \
-    vendor.audio.offload.track.enable=true \
-    vendor.audio.parser.ip.buffer.size=262144 \
-    vendor.audio.pp.asphere.enabled=false \
-    vendor.audio.safx.pbe.enabled=true \
-    vendor.tunnel.audio.encode=false \
-    vendor.voice.conc.fallbackpath=deep-buffer \
-    vendor.voice.path.for.pcm.voip=true
+audio.deep_buffer.media=true \
+audio.dolby.ds2.enabled=true \
+audio.offload.min.duration.secs=60 \
+audio.offload.video=true \
+persist.speaker.prot.enable=false \ 
+persist.vendor.audio.dualmic.config=endfire \
+persist.vendor.audio.fluence.voicecall=true \
+persist.vendor.audio.fluence.voicecomm=true \
+persist.vendor.audio.fluence.voicerec=true \
+ro.config.max_starting_bg=8 \
+ro.config.vc_call_vol_steps=8 \
+ro.vendor.audio.sdk.fluencetype=fluence \
+ro.vendor.audio.sdk.ssr=false \
+vendor.audio_hal.period_size=240 \
+vendor.audio.hw.aac.encoder=false \
+vendor.audio.offload.gapless.enabled=true \
+vendor.audio.playback.mch.downsample=true \
+vendor.audio.offload.multiple.enabled=false \
+vendor.audio.offload.passthrough=false \
+vendor.audio.offload.track.enable=true \
+vendor.audio.parser.ip.buffer.size=262144 \
+vendor.audio.pp.asphere.enabled=false \
+vendor.audio.safx.pbe.enabled=true \
+vendor.tunnel.audio.encode=false \
+vendor.voice.conc.fallbackpath=deep-buffer \
+vendor.voice.path.for.pcm.voip=true \
+persist.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb \
+persist.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb \
+persist.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb \
+persist.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb \
+persist.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb \
+persist.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb \
+persist.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb \
+bluetooth.hfp.client=1 \
+qcom.bt.le_dev_pwr_class=1 \
+ro.bluetooth.hfp.ver=1.6 \
+ro.qualcomm.bt.hci_transport=smd \
+vendor.qcom.bluetooth.soc=smd \
+camera.disable_zsl_mode=1 \
+persist.ts.rtmakeup=true \
+persist.vendor.camera.tof.direct=1 \
+persist.vendor.camera.display.umax=1920x1080 \
+persist.vendor.camera.display.lmax=1280x720 \
+persist.vendor.camera.HAL3.enabled=1 \
+persist.vendor.qti.telephony.vt_cam_interface=1 \
+persist.cne.feature=1 \
+persist.cne.logging.qxdm=3974 \
+persist.sys.cnd.iwlan=1 \
+ro.vendor.qti.core_ctl_min_cpu=2 \
+ro.vendor.qti.core_ctl_max_cpu=4 \
+dalvik.vm.heapstartsize=16m \
+dalvik.vm.heapgrowthlimit=256m \
+dalvik.vm.heapsize=512m \
+dalvik.vm.heaptargetutilization=0.75 \
+dalvik.vm.heapminfree=4m \
+dalvik.vm.heapmaxfree=8m \
+ro.vendor.display.cabl=0 \
+ro.sf.lcd_density=320 \
+vendor.display.enable_default_color_mode=1 \
+persist.qfp=false \
+ro.fpsensor.position=1 \
+ro.fm.transmitter=false \
+debug.sf.enable_hwc_vds=1 \
+debug.sf.hw=1 \
+debug.sf.latch_unsignaled=1 \
+debug.sf.recomputecrop=0 \
+debug.egl.hw=1 \
+vendor.gralloc.enable_fb_ubwc=1 \
+persist.hwc.mdpcomp.enable=true \
+debug.mdpcomp.logs=0 \
+dev.pm.dyn_samplingrate=1 \
+persist.demo.hdmirotationlock=false \
+debug.enable.sglscale=1 \
+vendor.display.disable_skip_validate=1 \
+sdm.perf_hint_window=50 \
+vendor.mm.enable.qcom_parser=4643 \
+vendor.vidc.enc.narrow.searchrange=1 \
+vendor.vidc.disable.split.mode=1 \
+ro.vendor.qti.sys.fw.bservice_enable=true \
+ro.vendor.qti.sys.fw.bservice_limit=5 \
+ro.vendor.qti.sys.fw.bservice_age=5000 \
+ro.vendor.extension_library=libqti-perfd-client.so \
+ro.vendor.qti.sys.fw.bg_apps_limit=60 \
+ro.control_privapp_permissions=disable \
+rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+rild.libargs=-d/dev/smd0 \
+ril.subscription.types=NV,RUIM \
+DEVICE_PROVISIONED=1 \
+persist.dbg.volte_avail_ovr=1 \
+persist.dbg.vt_avail_ovr=1 \
+persist.vendor.radio.no_wait_for_card=1 \
+persist.vendor.radio.dfr_mode_set=1 \
+persist.vendor.radio.relay_oprt_change=1 \
+persist.vendor.radio.oem_ind_to_both=0 \
+persist.vendor.radio.qcril_uim_vcc_feature=1 \
+persist.vendor.radio.0x9e_not_callname=1 \
+persist.vendor.radio.mt_sms_ack=30 \
+persist.vendor.radio.force_get_pref=1 \
+persist.vendor.radio.is_wps_enabled=true \
+persist.vendor.radio.custom_ecc=1 \
+persist.vendor.radio.eri64_as_home=1 \
+persist.vendor.radio.add_power_save=1 \
+persist.vendor.radio.data_con_rprt=1 \
+persist.vendor.radio.lte_vrte_ltd=1 \
+persist.vendor.radio.cs_srv_type=1 \
+persist.vendor.radio.sw_mbn_update=1 \
+persist.vendor.radio.app_mbn_path=/fsg \
+persist.vendor.radio.adb_log_on=0 \
+persist.vendor.radio.apm_sim_not_pwdn=1 \
+persist.vendor.radio.jbims=1 \
+persist.vendor.ims.disableDebugLogs=0 \
+persist.vendor.ims.disableIMSLogs=0 \
+persist.vendor.ims.disableDebugDataPathLogs=0 \
+persist.vendor.ims.disableADBLogs=0 \
+persist.vendor.ims.vt.enableadb=1 \
+persist.vendor.ims.disableQXDMLogs=1 \
+persist.radio.msgtunnel.start=true \
+persist.radio.calls.on.ims=true \
+persist.radio.domain.ps=0 \
+persist.rmnet.mux=enabled \
+persist.radio.REVERSE_QMI=0 \
+persist.radio.VT_USE_MDM_TIME=0 \
+persist.vt.supported=1 \
+persist.data.qmi.adb_logmask=0 \
+persist.data.netmgrd.qos.enable=true \
+persist.data.iwlan.enable=true \
+telephony.lteOnCdmaDevice=1 \
+ro.build.vendorprefix=/vendor \
+persist.radio.sar_sensor=1 \
+ro.hardware.sensors=hannah \
+ro.mot.sensors.glance_approach=false \
+ro.vendor.sensors.pmd=false \
+ro.vendor.sensors.rmd=false \
+ro.vendor.sdk.sensors.gestures=false \
+ro.vendor.sensors.facing=false \
+ro.vendor.sensors.scrn_ortn=false \
+ro.vendor.sensors.cmc=false \
+ro.vendor.sensors.pedometer=false \
+persist.timed.enable=true \
+ro.vendor.qti.sys.fw.use_trim_settings=true \
+ro.vendor.qti.sys.fw.empty_app_percent=50 \
+ro.vendor.qti.sys.fw.trim_empty_percent=100 \
+ro.vendor.qti.sys.fw.trim_cache_percent=100 \
+ro.vendor.qti.sys.fw.trim_enable_memory=2147483648 \
+ro.usb.bpt=2ec1 \
+ro.usb.bpt_adb=2ec5 \
+ro.usb.bpteth=2ec3 \
+ro.usb.bpteth_adb=2ec6 \
+ro.usb.mtp=2e82 \
+ro.usb.mtp_adb=2e76 \
+ro.usb.ptp=2e83 \
+ro.usb.ptp_adb=2e84 \
+wifi.interface=wlan0 \
+keyguard.no_require_sim=true \
+ro.carrier=unknown \
+ro.dalvik.vm.native.bridge=0
 
-# Bluetooth
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=smd
-
-# Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.display.umax=1920x1080 \
-    persist.vendor.camera.display.lmax=1280x720 \
-    persist.vendor.qti.telephony.vt_cam_interface=1 \
-    persist.camera.gyro.android=1 \
-    persist.camera.HAL3.enabled=0 \
-    persist.camera.is_type=1 \
-    vidc.enc.dcvs.extra-buff-count=2
-
-# CNE
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1
-
-# Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610 \
-    ro.vendor.display.cabl=2 \
-    ro.sf.lcd_density=320 \
-    vendor.display.enable_default_color_mode=1
-
-# Fm
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.transmitter=false
-
-# GPS
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gps.agps_provider=1
-
-# Graphics
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.egl.hw=1 \
-    debug.gralloc.enable_fb_ubwc=1 \
-    debug.sf.enable_hwc_vds=1 \
-    vendor.gralloc.enable_fb_ubwc=1 \
-    debug.sf.hw=1 \
-    debug.sf.latch_unsignaled=1 \
-    debug.sf.recomputecrop=0 \
-    dev.pm.dyn_samplingrate=1 \
-    persist.demo.hdmirotationlock=false \
-    persist.hwc.enable_vds=1 \
-    persist.sys.wfd.virtual=0 \
-    sdm.debug.disable_rotator_split=1 \
-    vendor.display.disable_skip_validate=1 \
-    sdm.perf_hint_window=50
-
-# IMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1
-
-# Media
-PRODUCT_PROPERTY_OVERRIDES += \
-    mm.enable.qcom_parser=4176895 \
-    media.stagefright.audio.sink=280 \
-    vendor.vidc.disable.split.mode=1 \
-    vendor.vidc.enc.disable_bframes=1 \
-    vendor.vidc.enc.disable_pframes=1 \
-    vendor.vidc.enc.disable.pq=true \
-    vendor.vidc.enc.narrow.searchrange=1 \
-    vendor.video.disable.ubwc=1
-
-# Memory optimizations
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.bservice_enable=true
-
-# Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.qti.sys.fw.bg_apps_limit=60
-
-# Radio
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    persist.radio.multisim.config=dsds \
-    ro.telephony.default_network=9,1 \
-    ro.telephony.call_ring.multiple=false \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.sib16_support=1 \
-    persist.vendor.data.mode=concurrent
-
-# Time Services
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.delta_time.enable=true \
-
-# Trim properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.use_trim_settings=true \
-    ro.vendor.qti.sys.fw.empty_app_percent=50 \
-    ro.vendor.qti.sys.fw.trim_empty_percent=100 \
-    ro.vendor.qti.sys.fw.trim_cache_percent=100 \
-    ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
-
-# Usb
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config.extra=none
-
-# Wifi
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
